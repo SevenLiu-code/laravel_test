@@ -55,4 +55,11 @@ function test2($i){
 		$func($i);
 	}
 }
-test2(3);
+// test2(3);
+$message = 'hello';
+$example = function () use (&$message){
+	// global $message;
+	var_dump($message);
+};
+$message = 'hi';
+$example();
