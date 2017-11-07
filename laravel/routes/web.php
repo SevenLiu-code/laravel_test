@@ -51,5 +51,7 @@ Route::group(['prefix' => 'auth'], function () {
 Route::get('view', function () {
     return view('welcome');
 });
-Route::get('member/{id}', 'MemberController@info');
-//Route::get('member/info', ['user' => 'MemberController@info']); // 5.4不行
+// Route::get('member/{id}', 'MemberController@info');
+Route::get('member/{liubin}', ['uses' => 'MemberController@info']);
+// Route::any('test1',[])
+Route::get('test1', ['uses' => 'StudentController@test1']);
