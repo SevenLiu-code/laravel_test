@@ -55,3 +55,4 @@ Route::get('view', function () {
 Route::get('member/{liubin}', ['uses' => 'MemberController@info']);
 // Route::any('test1',[])
 Route::get('test1', ['uses' => 'StudentController@test1']);
+Route::get('query1', ['uses' => 'StudentController@query1']);
