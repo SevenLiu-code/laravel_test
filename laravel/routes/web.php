@@ -56,3 +56,7 @@ Route::get('member/{liubin}', ['uses' => 'MemberController@info']);
 // Route::any('test1',[])
 Route::get('test1', ['uses' => 'StudentController@test1']);
 Route::get('query1', ['uses' => 'StudentController@query1']);
+Route::get('orm1', ['uses' => 'StudentController@orm1']);
+Route::get('orm2', ['uses' => 'StudentController@orm2']);
+Route::get('orm3', ['uses' => 'StudentController@orm3']);
+Route::get('section1', ['uses' => 'StudentController@section1']);
