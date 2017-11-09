@@ -60,3 +60,5 @@ Route::get('orm1', ['uses' => 'StudentController@orm1']);
 Route::get('orm2', ['uses' => 'StudentController@orm2']);
 Route::get('orm3', ['uses' => 'StudentController@orm3']);
 Route::get('section1', ['uses' => 'StudentController@section1']);
+Route::get('url', ['as' => 'url', 'uses' => 'StudentController@urlTest']);
+Route::get('request1', ['uses' => 'StudentController@request1']);

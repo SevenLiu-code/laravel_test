@@ -1,7 +1,8 @@
 <?php
 namespace App\Http\Controllers;
-Use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 use App\Student;
+use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function test1()
@@ -78,7 +79,21 @@ class StudentController extends Controller
     }
     public function section1()
     {
-      return view('student.section1');
+      $name = 'liubin';
+      $arr = ['liubin','imooc'];
+      return view('student.section1', ['name' => $name,'arr' => $arr]);
+    }
+    public function urlTest()
+    {
+      echo "urlTest";
+    }
+    public function request1(Request $request)
+    {
+      // 1.取值
+      echo $request ->name;
+      //echo dd($request ->all());
+      // 2.判断请求类型
+      echo $request ->method();
     }
 
 }
