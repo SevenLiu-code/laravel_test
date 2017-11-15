@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 class StudentController extends Controller
 {
     public function test1()
@@ -95,7 +96,64 @@ class StudentController extends Controller
       // 2.判断请求类型
       echo $request ->method();
     }
-
+    public function session1(Request $request)
+    {
+      //  1.
+        // $request ->session() ->put('key1', 'vaule1');
+      // 2.
+      // session() ->put('key2', 'value2');
+      // 3.
+      //Session::put('key3', 'vaule3');
+      // 把数据存入session数组中
+      //  Session::push('student', 'liubin');
+      //  Session::push('student', 'mooc');
+      //删除数据
+      //$res = Session::forget('key1');
+      // 删除全部
+      // $res = Session::flush('key1');
+      //取出数据并删除
+      //$res = Session::pull('student', 'default');
+      // 只有第一次访问时存在
+      $res = Session::flash('key-flash', 'vaule-flash');
+      //var_dump($res);
+    }
+    public function session2(Request $request)
+    {
+      //echo $request ->session() ->get('key1');
+      //echo session() ->get('key2');
+      // echo Session::get('key4', 'default'); // 不纯在则取默认值'default'
+      // $res = Session::get('student', 'default');
+      // var_dump($res);
+      // 访问所有数据 all()
+      // $res = Session::all();
+      $res = Session::get('key-flash');
+      var_dump($res);
+    }
+    public function response1()
+    {
+      // 相应json
+      // $data = [
+      //   'errCode' => 0,
+      //   'errMsg' => 'success',
+      //   'data' => 'liubin'
+      // ];
+      // return response() ->json($data);
+      // 重定向
+      return redirect('session2');
+    }
+    // 中间件
+    public function activity0()
+    {
+      echo '活动筹备中，敬请期待';
+    }
+    public function activity1()
+    {
+      echo '活动进行中！';
+    }
+    public function activity2()
+    {
+      echo '互动进行中！';
+    }
 }
 
 ?>

@@ -62,3 +62,14 @@ Route::get('orm3', ['uses' => 'StudentController@orm3']);
 Route::get('section1', ['uses' => 'StudentController@section1']);
 Route::get('url', ['as' => 'url', 'uses' => 'StudentController@urlTest']);
 Route::get('request1', ['uses' => 'StudentController@request1']);
+Route::group(['middleware' => 'web'], function () {
+  Route::any('session1', ['uses' => 'StudentController@session1']);
+  Route::any('session2', ['uses' => 'StudentController@session2']);
+});
+Route::get('response1', ['uses' => 'StudentController@response1']);
+// 中间件
+Route::get('activity0', ['uses' => 'StudentController@activity0']);
+Route::group(['middleware' => ['Activity']], function(){
+  Route::get('activity1', ['uses' => 'StudentController@activity1']);
+  Route::get('activity2', ['uses' => 'StudentController@activity2']);
+});
