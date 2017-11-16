@@ -24,20 +24,20 @@
   </div>
 @show
 <!-- 中间内容区局 -->
-  @yield('content');
+  @yield('content')
 <!-- 尾部 -->
 @section('footer')
   <div class="jumbotron" style="margin:0;">
       <div class="container">
-          <span>  @2016 imooc</span>
+          <span>@2016 imooc</span>
       </div>
   </div>
 @show
 
 <!-- jQuery 文件 -->
-<script src="asset('static/jquery/jquery.min.js')"></script>
+<script src="{{asset('static/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap JavaScript 文件 -->
-<script src="asset('static/bootstrap/js/bootstrap.min.js')"></script>
+<script src="{{asset('static/bootstrap/js/bootstrap.min.js')}}"></script>
 @section('javascript')
 
 @show

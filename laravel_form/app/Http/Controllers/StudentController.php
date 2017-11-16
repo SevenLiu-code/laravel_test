@@ -1,5 +1,6 @@
 <?php
     namespace App\Http\Controllers;
+    use App\Student;
     /**
      *
      */
@@ -8,6 +9,7 @@
 
       public function index()
       {
-        return view('student.index');
+        $students = Student::paginate(2);
+        return view('student.index', ['students' => $students]);
       }
     }
