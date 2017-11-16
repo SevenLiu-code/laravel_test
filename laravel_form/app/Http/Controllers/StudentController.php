@@ -12,4 +12,8 @@
         $students = Student::paginate(2);
         return view('student.index', ['students' => $students]);
       }
+      public function create()
+      {
+        return view('student.create');
+      }
     }

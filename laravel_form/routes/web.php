@@ -14,4 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::any('student/index', ['uses' => 'StudentController@index']);
+Route::get('student/index', ['uses' => 'StudentController@index']);
+Route::get('student/create', ['uses' => 'StudentController@create']);

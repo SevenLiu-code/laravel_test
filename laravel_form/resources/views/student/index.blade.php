@@ -1,17 +1,7 @@
 @extends('common/layouts')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <!-- 左侧菜单区域   -->
-        <div class="col-md-3">
-            @section('leftmenu')
-              <div class="list-group">
-                  <a href="#" class="list-group-item active">学生列表</a>
-                  <a href="#" class="list-group-item">新增学生</a>
-              </div>
-            @show
-        </div>
+
 
         <!-- 右侧内容区域 -->
         <div class="col-md-9">
@@ -54,27 +44,7 @@
                 <div class="pull-right">
                   {{ $students ->render() }}
                 </div>
-                <!-- <ul class="pagination pull-right">
-                    <li>
-                        <a href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li>
-                        <a href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul> -->
             </div>
 
         </div>
-    </div>
-</div>
-
 @stop

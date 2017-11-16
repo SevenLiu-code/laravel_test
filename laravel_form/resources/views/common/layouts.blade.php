@@ -23,8 +23,21 @@
       </div>
   </div>
 @show
-<!-- 中间内容区局 -->
-  @yield('content')
+<div class="container">
+    <div class="row">
+        <!-- 左侧菜单区域   -->
+        <div class="col-md-3">
+            @section('leftmenu')
+              <div class="list-group">
+                  <a href="#" class="list-group-item active">学生列表</a>
+                  <a href="#" class="list-group-item">新增学生</a>
+              </div>
+            @show
+        </div>
+          <!-- 中间内容区局 -->
+            @yield('content')
+    </div>
+</div>
 <!-- 尾部 -->
 @section('footer')
   <div class="jumbotron" style="margin:0;">
