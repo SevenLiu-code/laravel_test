@@ -1,10 +1,6 @@
 @extends('common/layouts')
 
 @section('content')
-
-
-        <!-- 右侧内容区域 -->
-        <div class="col-md-9">
             @include('common/message')
             <!-- 自定义内容区域 -->
             <div class="panel panel-default">
@@ -45,6 +41,4 @@
                   {{ $students ->render() }}
                 </div>
             </div>
-
-        </div>
 @stop

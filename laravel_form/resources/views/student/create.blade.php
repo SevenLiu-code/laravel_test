@@ -1,7 +1,6 @@
 @extends('common/layouts')
 
 @section('content')
-<div class="col-md-9">
   <div class="panel panel-default">
         <div class="panel-heading">新增学生</div>
         <div class="panel-body">
@@ -51,5 +50,4 @@
             </form>
         </div>
   </div>
-</div>
 @stop
