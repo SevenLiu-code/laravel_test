@@ -23,7 +23,7 @@
                               <td>{{$student ->name}}</td>
                               <td>{{$student ->age}}</td>
                               <td>{{$student ->sex}}</td>
-                              <td>{{$student ->created_at}}</td>
+                              <td>{{ date('Y-m-d', $student ->created_at) }}</td>
                               <td>
                                   <a href="">详情</a>
                                   <a href="">修改</a>

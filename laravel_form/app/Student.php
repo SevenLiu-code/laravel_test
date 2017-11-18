@@ -5,6 +5,7 @@
   {
     protected $table = 'student';
     public $timetamps = true; // 自动维护时间戳
+    protected $fillable = ['name', 'age', 'sex']; // 允许批量赋值
     protected function getDateFormat()
     {
       return time();
