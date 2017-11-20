@@ -16,6 +16,21 @@
       public function create(Request $request) // 新增学生列表页面
       {
         if ($request->isMethod('POST')) {
+            // 表单验证
+          $this ->validate($request, [
+            'Student.name' => 'bail|required|min:2|max:20',
+            'Student.age' => 'required|integer',
+            'Student.sex' => 'required|integer'
+          ], [
+            'required' => ':attribute为必填字段',
+            'min' => ':attribute长度不符合要求',
+            'integer' => ':attribute必须为数字'
+          ],
+          [
+            'Student.name' => '姓名',
+            'Student.age' => '年龄',
+            'Student.sex' => '性别'
+          ]); // 1.控制器验证 -> 如果验证通过，代码会继续往下执行，否则会将错误信息存至session中
           $data = $request ->input('Student');
           if(Student::create($data)){
               return redirect('/student/index') ->with('success', '添加成功!');

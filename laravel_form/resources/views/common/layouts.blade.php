@@ -18,7 +18,6 @@
   <div class="jumbotron">
       <div class="container">
           <h2>轻松学会Laravel</h2>
-
           <p> - 玩转Laravel表单</p>
       </div>
   </div>
