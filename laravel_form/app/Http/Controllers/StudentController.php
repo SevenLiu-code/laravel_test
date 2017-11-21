@@ -1,5 +1,6 @@
 <?php
     namespace App\Http\Controllers;
+    use Validator;
     use App\Student;
     use Illuminate\Http\Request;
     /**
@@ -7,7 +8,6 @@
      */
     class StudentController extends Controller
     {
-
       public function index() // 列表首页
       {
         $students = Student::paginate(3);
@@ -15,9 +15,26 @@
       }
       public function create(Request $request) // 新增学生列表页面
       {
+        $student = new Student();
         if ($request->isMethod('POST')) {
             // 表单验证
-          $this ->validate($request, [
+            // 1.控制器验证 -> 如果验证通过，代码会继续往下执行，否则会将错误信息存至session中
+          // $this ->validate($request, [
+          //   'Student.name' => 'bail|required|min:2|max:20',
+          //   'Student.age' => 'required|integer',
+          //   'Student.sex' => 'required|integer'
+          // ], [
+          //   'required' => ':attribute为必填字段',
+          //   'min' => ':attribute长度不符合要求',
+          //   'integer' => ':attribute必须为数字'
+          // ],
+          // [
+          //   'Student.name' => '姓名',
+          //   'Student.age' => '年龄',
+          //   'Student.sex' => '性别'
+          // ]);
+          // 2.validator类验证
+          $validator = validator::make($request ->all(), [
             'Student.name' => 'bail|required|min:2|max:20',
             'Student.age' => 'required|integer',
             'Student.sex' => 'required|integer'
@@ -30,7 +47,12 @@
             'Student.name' => '姓名',
             'Student.age' => '年龄',
             'Student.sex' => '性别'
-          ]); // 1.控制器验证 -> 如果验证通过，代码会继续往下执行，否则会将错误信息存至session中
+          ]);
+          if ($validator ->fails()) {
+              return redirect('student/create')
+                        ->withErrors($validator)
+                        ->withInput(); // 数据保持
+          }
           $data = $request ->input('Student');
           if(Student::create($data)){
               return redirect('/student/index') ->with('success', '添加成功!');
@@ -38,7 +60,7 @@
               return redirect() ->back();
           }
         }
-        return view('student.create');
+        return view('student.create', ['student' => $student]);
       }
       public function save(Request $request) // 表单指定方法提交
       {
