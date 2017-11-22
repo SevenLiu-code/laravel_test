@@ -18,7 +18,7 @@
     {
       return $val; // 返回Unix时间戳
     }
-    public function sex($ind = null)
+    public function getSex($ind = null)
     {
       $arr = [
         self::SEX_UN => '未知',

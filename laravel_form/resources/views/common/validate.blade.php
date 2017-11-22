@@ -4,7 +4,7 @@
                 <ul>
                   <li>{{ $errors -> first() }}</li>
                 </ul>
-            </div>    
+            </div>
             <div class="alert alert-danger">
                 <ul>
                     @foreach( $errors ->all() as $error )
