@@ -1,0 +1,7 @@
+/*公用头部*/
+.common-head { width: 100%; height: 44px; position: relative;
+    line-height: 44px; background-color: #1da158; }
+.common-head span.text { position: absolute; left: 0; width: 100%; height: 44px; color: #fff;
+  text-align: center;  }
+.common-head span.menu-icon { height: 22px; position: absolute; right: 15px; top: 10px;
+  color: #fff; font-size: 22px; }

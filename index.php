@@ -61,5 +61,5 @@ $example = function () use (&$message){
 	// global $message;
 	var_dump($message);
 };
-$message = 'hi';
+$message = 'hi666';
 $example();

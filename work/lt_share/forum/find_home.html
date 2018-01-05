@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分享</title>
+  <link rel="stylesheet" href="./css/m.reset.css">
+  <style>
+      .flex { display: flex; display: -webkit-flex; }
+      header, section { padding: 0 15px; }
+     .title { margin: 22px 0 13px 0; font-size: 26px; line-height: 26px; color: #333; }
+     .state { margin-bottom: 28px; align-items: center; }
+     .state .state_item { margin-right: 28px; }
+     .state .state_item span { display: inline-block; width: 18px; height: 16px; margin-right: 8px; }
+     .state .state_item span.browse { background: url(./img/state_browse.png) no-repeat center 1px;
+                  background-size: 100%; }
+     .state .state_item span.comment { background: url(./img/state_pl.png) no-repeat center center;
+                  background-size: 100%; }
+    .state .state_item i { vertical-align: top; line-height: 18px; color: #999; font-size: 13px; }
+    section.info { margin-bottom: 6px; }
+    .stamp { justify-content: space-between; }
+    .stamp .author span.pic { display: inline-block;width: 26px; height: 26px;
+      line-height: 26px; margin-right: 9px; }
+    .stamp .author span.pic img { width: 100%; border-radius: 50%; }
+    .stamp .author i { vertical-align: top; font-size: 14px; color: #333; line-height: 26px; }
+    .stamp .date { line-height: 26px; vertical-align: top; font-size: 12px; color: #999; }
+    .share_to { margin-top: 33px; }
+    .share_to .share_to_text { text-align: center; }
+    .share_to .share_to_text span { margin: 0 6px; line-height: 20px; color: #333; font-size: 14px; }
+    .share_to .share_to_text i { display: inline-block; width: 14px; line-height: 20px;
+       border-top: 1px solid #cbcbcb; vertical-align: top; margin-top: 10px; }
+    .share_list { padding: 26px 0; border-bottom: 1px solid #F2F2F2; }
+    .share_list .share_item { flex: 1; text-align: center; }
+    .share_list .share_item .share_item_pic { }
+    .share_list .share_item .share_item_pic img { display: block; width: 50px; height: 50px;
+        margin: 0 auto; }
+    .share_list .share_item p.text { margin-top: 8px; line-height: 12px;
+       font-size: 12px; color: #666; }
+    section.content img { width: 100%; }
+    .comment h2 { margin: 15px 0 4px 0;  line-height: 16px;
+       color: #333333; font-size: 16px; }
+    .comment .comment_item { padding: 16px 0; border-bottom: 1px solid #F2F2F2; }
+    .comment .comment_content { padding-left: 35px; line-height: 18px; font-size: 13px; color: #999; }
+    .comment .comment_more { width: 160px; height: 33px; line-height: 33px;
+      margin: 18px auto; text-align: center; border: 1px solid #e0e0e0;
+          border-radius: 33px;  }
+    .comment .comment_more a { display: block; color: #c0c0c0; }
+    section.publish { margin-bottom: 50px; padding: 15px; background-color: #FAFAFA; }
+   .publish .publish_link { justify-content: space-between; align-items: center;
+    font-size: 14px; color: #999;  }
+   .publish .publish_link .collection { display: inline-block; width: 18px; height: 18px;
+    margin-right: 10px; background: url(./img/shoucang@3x.png) no-repeat center center;
+    background-size: 100%; }
+    section.download { padding: 0; width: 100%; position: fixed;  left: 0; height: 50px;
+      bottom: 0; background-color: rgba(0,0,0,.8); }
+    .download_link .left { flex: 1; align-items: center; }
+    .download_link .left div.logo { display: inline-block; width: 50px; height: 34px; background: url(./img/logo.png) no-repeat center center;
+        margin: 0 10px 0 10px; background-size: 100%; }
+    .download_link .left .text { font-size: 13px; color: #fff; }
+    .download_link .right { flex: 110px 0; line-height: 50px; font-size: 16px; text-align: center;
+      color: #fff; background-color: #E20000;  }
+  </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">为了全家的感受，奔驰V260L</h1>
+    </header>
+    <section class="info">
+        <div class="state flex">
+          <div class="state_item">
+            <span class="browse"></span><i>230</i>
+          </div>
+          <div class="state_item">
+            <span class="comment"></span><i>88</i>
+          </div>
+        </div>
+        <div class="stamp flex">
+          <div class="author stamp_item">
+            <span class="pic">
+                <img src="./img/pic.jpg" alt="">
+            </span><i>倍儿牛二手车</i>
+          </div>
+          <div class="date stamp_item">
+            <i>12月4日</i>&nbsp;<i>15:30</i>
+          </div>
+        </div>
+    </section>
+    <section class="content">
+        <p>优点：
+      1、如丝般顺滑。方向手感、加速、刹车，减震，都能让你想到这个词语。
+      2、外观炫酷，颜色炫酷！回头率高。但大部分人知道这车是啥，认识雷克萨斯，认识我车，认识我
+      。这是优点。
+      3、五种驾驶模式+雪模式，可调悬架给力。虽然没都去试过，目前还知道普通模式和自定义模式何
+
+      同，但是感觉很牛逼。
+      4、后备箱很大，很规整！
+      5、内饰牛逼。百加速7秒，算是应速度！比GTI还慢一点点！本来买车还是冲加速来，但是做进
+
+      驾驶舱，完全没极速驾驶欲望！看到满眼豪华和泛黄装饰，你会静下来享受过程。
+      6、凌志服务和免费保养服务比较给力，还算可以省下一大笔！我还延长了6年15万（加钱买）。
+      7、仪表漂亮，配置该都，目前没遗憾，虽然贵，但是没觉太值。
+      8、车子操控，路感清晰。让我随时开车出去自驾游和跑长途冲</p>
+	  <div>
+			<video id="video" class="video" preload="auto" playsinline src="http://wqs.jd.com/promote/superfestival/superfestival.mp4" width="100%" height="auto" type="video/mp4"></video>
+	  </div>
+    </section>
+    <section class="share_to">
+          <div class="share_to_text">
+             <i></i><span>赞一个</span><i></i>
+          </div>
+          <ul class="share_list flex">
+              <li class="share_item">
+                <a href="">
+                  <div class="share_item_pic share_item_zan">
+                    <img src="./img/dianzan@3x.png" alt="">
+                  </div>
+                  <p class="text">345</p>
+                </a>
+              </li>
+              <!-- <li class="share_item">
+                <a href="">
+                  <div class="share_item_pic share_item_wx">
+                    <img src="./img/pengyouquan@3x.png" alt="">
+                  </div>
+                  <p class="text">朋友圈</p>
+                </a>
+              </li> -->
+              <!-- <li class="share_item">
+                <a href="">
+                  <div class="share_item_pic share_item_f">
+                    <img src="./img/weixinhaoyou@3x.png" alt="">
+                  </div>
+                  <p class="text">微信好友</p>
+                </a>
+              </li> -->
+          </ul>
+    </section>
+    <section class="comment">
+        <h2>最新评论</h2>
+        <ul class="comment_list">
+          <li class="comment_item">
+            <div class="stamp flex">
+              <div class="author stamp_item">
+                <span class="pic">
+                    <img src="./img/pic.jpg" alt="">
+                </span><i>倍儿牛二手车</i>
+              </div>
+              <div class="date stamp_item">
+                <i>12月4日</i>&nbsp;<i>15:30</i>
+              </div>
+            </div>
+            <p class="comment_content">快点啊，等到花儿都谢了...</p>
+          </li>
+          <li class="comment_item">
+            <div class="stamp flex">
+              <div class="author stamp_item">
+                <span class="pic">
+                    <img src="./img/pic.jpg" alt="">
+                </span><i>倍儿牛二手车</i>
+              </div>
+              <div class="date stamp_item">
+                <i>12月4日</i>&nbsp;<i>15:30</i>
+              </div>
+            </div>
+            <p class="comment_content">赞一个</p>
+          </li>
+          <li class="comment_item">
+            <div class="stamp flex">
+              <div class="author stamp_item">
+                <span class="pic">
+                    <img src="./img/pic.jpg" alt="">
+                </span><i>倍儿牛二手车</i>
+              </div>
+              <div class="date stamp_item">
+                <i>12月4日</i>&nbsp;<i>15:30</i>
+              </div>
+            </div>
+            <p class="comment_content">赞一个</p>
+          </li>
+        </ul>
+        <div class="comment_more">
+            <a href="">查看更多评论</a>
+        </div>
+    </section>
+    <section class="publish">
+        <a href="" class="publish_link flex">
+          <span>发表评论...</span>
+          <i class="collection"></i>
+        </a>
+    </section>
+    <section class="download">
+      <a href="" class="download_link flex">
+        <div class="left flex">
+            <div class="logo"></div>
+            <div class="text"><i>更多精彩内容</i><br><span>请下载倍儿牛APP</span></div>
+        </div>
+        <div class="right">立即下载</div>
+      </a>
+    </section>
+</body>
+</html>

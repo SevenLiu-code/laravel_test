@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'farm-icon';
+  src:  url('fonts/farm-icon.eot?2xtcws');
+  src:  url('fonts/farm-icon.eot?2xtcws#iefix') format('embedded-opentype'),
+    url('fonts/farm-icon.ttf?2xtcws') format('truetype'),
+    url('fonts/farm-icon.woff?2xtcws') format('woff'),
+    url('fonts/farm-icon.svg?2xtcws#farm-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'farm-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\f00d";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-times:before {
+  content: "\f00d";
+}
+.icon-bars:before {
+  content: "\f0c9";
+}
+.icon-navicon:before {
+  content: "\f0c9";
+}
+.icon-reorder:before {
+  content: "\f0c9";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-up:before {
+  content: "\f106";
+}
