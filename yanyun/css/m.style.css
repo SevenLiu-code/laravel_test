@@ -1,7 +1,52 @@
 /*公用头部*/
+html,body { background-color: #ececec; width: 100%; height: 100%; -webkit-overflow-scrolling:touch; }
 .common-head { width: 100%; height: 44px; position: relative;
-    line-height: 44px; background-color: #1da158; }
+     background-color: #1da158; }
 .common-head span.text { position: absolute; left: 0; width: 100%; height: 44px; color: #fff;
-  text-align: center;  }
-.common-head span.menu-icon { height: 22px; position: absolute; right: 15px; top: 10px;
-  color: #fff; font-size: 22px; }
+  line-height: 44px; text-align: center; z-index: 1;}
+.common-head span.menu-icon { height: 22px; padding: 0 5px; position: absolute; right: 10px; top: 10px;
+  color: #fff; font-size: 22px; z-index: 2; }
+.common-head a.return { position: absolute; left: 13px; top: 9px; font-size: 26px;
+    padding: 0 4px; color: #fff; }
+.common-head .menu-main { display: none; width: 100%; position: absolute; top: 44px; left: 0; }
+.common-head .menu-main .menu-list { background-color: rgba(0,0,0,.4); }
+.common-head .menu-main .menu-item a { display: block; padding: 10px 20px; position: relative;
+  color: #DDD; font-size: 14px; }
+.common-head .menu-main .menu-item a i { position: absolute; top: 10px; right: 20px;
+  font-size: 18px; }
+.banner-wrap .banner-list .banner-item { line-height: 0; }
+.banner-wrap .banner-list .banner-item img { width: 100%; }
+.home-main .main-list {  margin-top: 15px; overflow: hidden; background-color: #fff; }
+.home-main .main-list .main-item { margin: 15px; line-height: 0; }
+.home-main .main-list .main-item a { display: block; }
+.home-main .main-list .main-item a img { width: 100%; }
+footer { padding: 10px 0; text-align: center; font-size: 12px; color: #999; }
+/*启动图*/
+.hidden { visibility: hidden; }
+.no-over { width: 100%; height: 100% ;overflow: hidden; }
+section.start-pictrue { position: fixed; top: 0; left: 0; right: 0; height: 100%;
+  overflow: hidden; transform: translateY(0); z-index: 99; }
+section.start-pictrue.start-hidden { transform: translateY(-100%); }
+section.start-pictrue div.start-bg { width: 100%; height: 100%;
+  background: url(../img/start.jpg) no-repeat center; background-size: cover;  }
+section.start-pictrue .start-slogan { width: 68%; position: absolute; left: 0; right: 0;
+    top: 34%;  margin: 0 auto; }
+section.start-pictrue .start-up { position: absolute; bottom: 8%; width: 100%;
+    text-align: center; color: #d5e0c5; font-size: 12px; }
+section.start-pictrue .start-up span { font-size: 24px; }
+/*内页*/
+section.unit-text { margin-top: 10px; line-height: 24px; padding: 10px 15px 5px 15px;
+  background-color: #fff; }
+section.unit-text p.text { padding-left: 4px; border-left: 4px solid #1da158;
+  font-size: 12px; }
+section.unit-text .line { margin-top: 10px; border-bottom: 1px solid #e6e6e6; }
+.unit-content .unit-list { overflow: hidden; background-color: #fff; }
+.unit-content .unit-list .unit-item { margin: 15px 0; padding: 0 15px; font-size: 0; }
+.unit-content .unit-list .unit-item img { width: 100%; }
+/*关于我们*/
+section.about-banner { margin-top: 10px; padding: 10px 0; background-color: #fff; font-size: 0; }
+section.about-banner img { width: 100%; }
+section.about-cotent { margin-top: 10px; padding: 15px 10px; background-color: #fff; }
+section.about-cotent h2 {  margin-bottom: 10px; font-size: 16px;
+   line-height: 28px; color: #333333; }
+section.about-cotent p { line-height: 24px; font-size: 14px; color: #666666; }

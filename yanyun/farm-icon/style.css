@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'farm-icon';
-  src:  url('fonts/farm-icon.eot?2xtcws');
-  src:  url('fonts/farm-icon.eot?2xtcws#iefix') format('embedded-opentype'),
-    url('fonts/farm-icon.ttf?2xtcws') format('truetype'),
-    url('fonts/farm-icon.woff?2xtcws') format('woff'),
-    url('fonts/farm-icon.svg?2xtcws#farm-icon') format('svg');
+  src:  url('fonts/farm-icon.eot?86wner');
+  src:  url('fonts/farm-icon.eot?86wner#iefix') format('embedded-opentype'),
+    url('fonts/farm-icon.ttf?86wner') format('truetype'),
+    url('fonts/farm-icon.woff?86wner') format('woff'),
+    url('fonts/farm-icon.svg?86wner#farm-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -45,6 +45,12 @@
 .icon-angle-left:before {
   content: "\f104";
 }
+.icon-angle-right:before {
+  content: "\f105";
+}
 .icon-angle-up:before {
   content: "\f106";
+}
+.icon-angle-down:before {
+  content: "\f107";
 }

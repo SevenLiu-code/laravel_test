@@ -3,25 +3,66 @@
 <head>
   <meta charset="UTF-8"/>
   <title>燕云农场</title>
-  <meta name="description" content=""/>
-  <meta name="keywords" content=""/>
+  <meta name="description" content="燕云农场"/>
+  <meta name="keywords" content="燕云农场"/>
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="format-detection" content="telephone=no" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <link rel="stylesheet" type="text/css" href="./css/m.reset.css">
   <link rel="stylesheet" type="text/css" href="./css/m.style.css">
   <link rel="stylesheet" type="text/css" href="./css/font-style.css">
-  <script type="text/javascript" src="./js/zepto.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/pageSlider.min.js"></script>
   <script type="text/javascript" src="./js/touch.js"></script>
 </head>
-<body>
-    <header class="common-head home-head">
+<body class="no-over">
+    <section class="start-pictrue">
+      <div class="start-bg">
+          <div class="start-slogan">
+            <img src="./img/slogan.png" alt="" width="100%">
+          </div>
+          <div class="start-up">
+              <span class="icon-angle-up"></span>
+              <p>向上滑动页面</p>
+          </div>
+      </div>
+    </section>
+    <header class="common-head home-head hidden">
         <span class="text">燕云农场</span><span class="menu-icon icon-navicon"></span>
         <div class="menu-main">
-          <list class="menu-list">
-            <li></li>
-          </list>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="">关于我们 <i class="icon-angle-right"></i></a>
+            </li>
+          </ul>
         </div>
     </header>
+    <section class="banner-wrap hidden">
+        <ul class="banner-list">
+          <li class="banner-item"><img src="./img/banner_1.jpg" alt=""></li>
+        </ul>
+    </section>
+    <section class="home-main hidden">
+        <ul class="main-list">
+          <li class="main-item">
+            <a href=""><img src="./img/lbcy.jpg" alt="老爸草原"></a>
+          </li>
+          <li class="main-item">
+            <a href=""><img src="./img/mhhh.jpg" alt="梦幻花海"></a>
+          </li>
+          <li class="main-item">
+            <a href=""><img src="./img/dznc.jpg" alt="订制农场"></a>
+          </li>
+          <li class="main-item">
+            <a href=""><img src="./img/fcjd.jpg" alt="房产基地"></a>
+          </li>
+          <li class="main-item">
+            <a href=""><img src="./img/yysc.jpg" alt="越野赛场"></a>
+          </li>
+        </ul>
+    </section>
+    <footer class="hidden">
+        <p>北京燕云旅游开发有限责任公司</p>
+    </footer>
 </body>
 </html>
